@@ -1,0 +1,13 @@
+Deploying a simple static website using docker container
+----------------------------------------------------------
+Google "free css template"
+Google "free css woodo" and copy the download url
+Login to docker host machine
+wget https://www.free-css.com/assets/files/free-css-templates/download/page265/woodo.zip
+unzip woodo.zip
+cd woodo/
+ls -lrt
+check all the contents are present
+docker run -it -d -p 82:80 -v /home/osboxes/woodo:/usr/share/nginx/html nginx
+docker container ls
+Browse the url "http://192.168.56.15:82/"
