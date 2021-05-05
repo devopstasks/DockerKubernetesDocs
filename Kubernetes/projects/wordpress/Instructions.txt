@@ -1,0 +1,13 @@
+Note:-
+Start the EKS following terraform steps.
+Check which zone node is created.
+Create the storageclass in a zone where node is created.
+Run the below commands in order
+kubectl create -f storageclass.yml
+kubectl create -f pv-claim.yml
+kubectl create -f secrets.yml
+kubectl create -f mysqldb.yml
+kubectl create -f mysqldb-service.yml
+kubectl create -f wordpress.yml
+kubectl create -f wordpress-service.yml
+
